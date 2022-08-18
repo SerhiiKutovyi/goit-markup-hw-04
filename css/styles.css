@@ -202,7 +202,18 @@ header {
 /* ____________________Секция герой_______________________*/
 
 .hero-section {
-  background-color: rgba(47, 48, 58, 1);
+  background-color: rgba(196, 196, 196, 1);
+
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-section .section {
