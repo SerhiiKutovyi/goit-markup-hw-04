@@ -354,7 +354,7 @@ header {
   justify-content: center;
 }
 
-.team-soc-link {
+.team-icon {
   fill: rgba(175, 177, 184, 1);
 }
 
@@ -363,8 +363,17 @@ header {
   background-color: var(--accent-color);
 }
 
-.team-soc-link:hover.team-icon {
-  fill: blue;
+.team-icon:hover,
+.team-icon:focus {
+  fill: var(--primary-bg-color);
+}
+
+.team-soc-link:hover .team-icon {
+  fill: var(--primary-bg-color);
+}
+
+.team-soc-link:focus .team-icon {
+  fill: var(--primary-bg-color);
 }
 
 /* =======================Подвал============================ */
@@ -407,6 +416,10 @@ footer {
 .address-nav:hover,
 .address-nav:focus {
   color: var(--accent-color);
+}
+
+.call {
+  display: flex;
 }
 
 /* --------------------PORTFOLIO.CSS-------------------- */
