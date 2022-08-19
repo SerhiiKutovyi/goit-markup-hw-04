@@ -208,9 +208,8 @@ header {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -263,6 +262,19 @@ header {
   text-transform: uppercase;
 }
 
+.feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  background-color: rgba(245, 244, 250, 1);
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+}
+
 /*-------------------------Примеры работ------------------------*/
 
 .examples {
@@ -285,6 +297,7 @@ header {
 
 .team-border {
   padding: 30px 10px;
+
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -292,10 +305,9 @@ header {
 }
 
 .author-team {
-  color: var(--title-text-color);
-
   margin-bottom: 10px;
 
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -305,20 +317,54 @@ header {
   display: flex;
 
   width: 270px;
-  height: 368px;
+  height: 428px;
   font-size: 16px;
   line-height: 1.18;
 }
 
 .section-team .item {
-  border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .section-team .item + .item {
   margin-left: 30px;
+}
+
+.team-border > p {
+  margin-bottom: 16px;
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.team-soc-link {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-soc-link {
+  fill: rgba(175, 177, 184, 1);
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-soc-link:hover.team-icon {
+  fill: blue;
 }
 
 /* =======================Подвал============================ */
