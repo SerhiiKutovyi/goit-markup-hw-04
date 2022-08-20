@@ -126,8 +126,11 @@ header {
   display: flex;
 }
 
-.logo-first {
-  color: var(--accent-color);
+.logo {
+  display: inline-block;
+  width: 145px;
+  height: 31px;
+
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -135,8 +138,16 @@ header {
   font-family: 'Raleway', sans-serif;
 }
 
+.logo-first {
+  color: var(--accent-color);
+}
+
 .logo-second {
   color: rgba(0, 0, 0, 1);
+}
+
+.logo-second-foot {
+  color: var(--primary-bg-color);
 }
 
 .site-nav {
@@ -376,6 +387,50 @@ header {
   fill: var(--primary-bg-color);
 }
 
+/*____________________постійні кліенти__________________ */
+
+.regular {
+  height: 372px;
+}
+
+.regular-list {
+  display: flex;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.regular-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regular-link {
+  border: 1px solid;
+  width: 170px;
+  height: 92px;
+  padding: 12px 32px;
+
+  border-color: rgba(175, 177, 184, 1);
+}
+
+.regular-link:hover {
+  border-color: var(--accent-color);
+}
+
+.regular-icon {
+  fill: rgba(175, 177, 184, 1);
+}
+
+.regular-icon:hover {
+  fill: var(--accent-color);
+}
+
+.regular-link:hover .regular-icon {
+  fill: var(--accent-color);
+}
+
 /* =======================Подвал============================ */
 
 footer {
@@ -383,6 +438,8 @@ footer {
 }
 
 .foot {
+  display: flex;
+
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -399,8 +456,8 @@ footer {
 }
 
 .address {
+  display: block;
   font-style: normal;
-  margin-top: 20px;
 }
 
 .address-maps:hover,
@@ -416,10 +473,6 @@ footer {
 .address-nav:hover,
 .address-nav:focus {
   color: var(--accent-color);
-}
-
-.call {
-  display: flex;
 }
 
 /* --------------------PORTFOLIO.CSS-------------------- */
