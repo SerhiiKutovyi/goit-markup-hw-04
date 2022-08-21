@@ -187,29 +187,70 @@ header {
 
 /* ___________________Contacts___________________*/
 
+.flex-smartphone {
+  display: flex;
+  align-items: center;
+}
+
+.hover-smartphone {
+  display: flex;
+}
+
 .search .contacts {
   display: flex;
   margin-left: auto;
 }
 
 .contacts .item + .item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
-.contacts .link-contacts {
-  color: var(--primary-text-color);
+.envelope-icon {
+  margin-right: 10px;
+  fill: rgba(117, 117, 117, 1);
+}
+
+.contacts-envelope {
+  color: rgba(117, 117, 117, 1);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   text-decoration: none;
 }
 
-.contacts .link-contacts:hover,
-.contacts .link-contacts:focus {
+.contacts-envelope:hover,
+.contacts-envelope:focus {
   color: var(--accent-color);
 }
 
+.contacts-envelope:hover .envelope-icon,
+.contacts-envelope:focus .envelope-icon {
+  fill: var(--accent-color);
+}
+
+.contacts-smartphone {
+  color: rgba(117, 117, 117, 1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.smartphone-icon {
+  margin-right: 10px;
+  fill: rgba(117, 117, 117, 1);
+}
+
+.contacts-smartphone:hover,
+.contacts-smartphone:focus {
+  color: var(--accent-color);
+}
+
+.contacts-smartphone:hover .smartphone-icon {
+  fill: var(--accent-color);
+}
 /* ____________________Секция герой_______________________*/
 
 .hero-section {
@@ -379,10 +420,7 @@ header {
   fill: var(--primary-bg-color);
 }
 
-.team-soc-link:hover .team-icon {
-  fill: var(--primary-bg-color);
-}
-
+.team-soc-link:hover .team-icon,
 .team-soc-link:focus .team-icon {
   fill: var(--primary-bg-color);
 }
@@ -415,7 +453,8 @@ header {
   border-color: rgba(175, 177, 184, 1);
 }
 
-.regular-link:hover {
+.regular-link:hover,
+.regular-link:focus {
   border-color: var(--accent-color);
 }
 
@@ -423,11 +462,13 @@ header {
   fill: rgba(175, 177, 184, 1);
 }
 
-.regular-icon:hover {
+.regular-icon:hover,
+.regular-icon:focus {
   fill: var(--accent-color);
 }
 
-.regular-link:hover .regular-icon {
+.regular-link:hover .regular-icon,
+.regular-link:focus .regular-icon {
   fill: var(--accent-color);
 }
 
@@ -448,6 +489,11 @@ footer {
   margin-bottom: 9px;
 }
 
+.call {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
 .logo-sec,
 .address-maps {
   color: var(--primary-bg-color);
@@ -456,7 +502,7 @@ footer {
 }
 
 .address {
-  display: block;
+  margin-top: 20px;
   font-style: normal;
 }
 
@@ -473,6 +519,59 @@ footer {
 .address-nav:hover,
 .address-nav:focus {
   color: var(--accent-color);
+}
+
+/*______________ Приєднуйтесь */
+
+.footer-title {
+  margin-bottom: 20px;
+
+  color: var(--primary-bg-color);
+
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-icon {
+  fill: var(--primary-bg-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+  fill: var(--primary-bg-color);
+}
+
+.footer-soc-link:hover .footer-icon {
+  fill: var(--primary-bg-color);
+}
+
+.footer-soc-link:focus .footer-icon {
+  fill: var(--primary-bg-color);
 }
 
 /* --------------------PORTFOLIO.CSS-------------------- */
@@ -509,6 +608,9 @@ footer {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
 
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
   border: none;
 }
 
@@ -537,6 +639,11 @@ footer {
 
   font-size: 16px;
   line-height: 1.87;
+}
+
+.gallery-list:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallery-list:nth-child(3n) {
