@@ -100,7 +100,6 @@ img {
 .btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
-
   border: none;
 }
 
@@ -150,13 +149,28 @@ header {
   color: var(--primary-bg-color);
 }
 
+/*____________________ Навигация___________________ */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .site-nav {
   display: flex;
+  align-items: center;
   padding: 32px 0px;
   margin-left: 93px;
 }
 
-.site-nav .link {
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.link-studio {
+  width: 45px;
+  height: 16px;
+
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -165,44 +179,79 @@ header {
   letter-spacing: 0.02em;
 }
 
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.site-nav .item + .item {
-  margin-left: 50px;
-}
-
-.site-nav,
-.link:hover,
-.site-nav,
-.link:focus {
+.link-studio:hover,
+.link-studio:focus {
   color: var(--accent-color);
 }
 
-.site-nav .current {
+.link-portfolio {
+  width: 72px;
+  height: 16px;
+
+  color: var(--title-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.link-portfolio:hover,
+.link-portfolio:focus {
   color: var(--accent-color);
+}
+
+.link-contacts {
+  width: 64px;
+  height: 16px;
+
+  color: var(--title-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.link-contacts:hover,
+.link-contacts:focus {
+  color: var(--accent-color);
+}
+
+.current {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.current::after {
+  bottom: -100%;
+  left: 0;
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+
+  background-color: var(--accent-color);
 }
 
 /* ___________________Contacts___________________*/
 
-.flex-smartphone {
-  display: flex;
-  align-items: center;
-}
-
-.hover-smartphone {
-  display: flex;
-}
-
 .search .contacts {
   display: flex;
   margin-left: auto;
+  gap: 30px;
 }
 
-.contacts .item + .item {
-  margin-left: 30px;
+.smartphone-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.contacts-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 .envelope-icon {
@@ -210,7 +259,11 @@ header {
   fill: rgba(117, 117, 117, 1);
 }
 
-.contacts-envelope {
+.contacts-link {
+
+  display: flex;
+  align-items: center;
+  
   color: rgba(117, 117, 117, 1);
   font-weight: 500;
   font-size: 14px;
@@ -219,38 +272,29 @@ header {
   text-decoration: none;
 }
 
-.contacts-envelope:hover,
-.contacts-envelope:focus {
+.contacts-link:hover,
+.contacts-link:focus {
   color: var(--accent-color);
 }
 
-.contacts-envelope:hover .envelope-icon,
+.envelope-icon .contacts-envelope:hover .envelope-icon,
 .contacts-envelope:focus .envelope-icon {
   fill: var(--accent-color);
 }
 
-.contacts-smartphone {
-  color: rgba(117, 117, 117, 1);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
 
 .smartphone-icon {
   margin-right: 10px;
   fill: rgba(117, 117, 117, 1);
 }
 
-.contacts-smartphone:hover,
-.contacts-smartphone:focus {
-  color: var(--accent-color);
-}
-
-.contacts-smartphone:hover .smartphone-icon {
+.contacts-link:hover .smartphone-icon,
+.contacts-link:focus .smartphone-icon,.contacts-link:hover .envelope-icon,
+.contacts-link:focus .envelope-icon {
   fill: var(--accent-color);
 }
+
+
 /* ____________________Секция герой_______________________*/
 
 .hero-section {
@@ -451,6 +495,7 @@ header {
   padding: 12px 32px;
 
   border-color: rgba(175, 177, 184, 1);
+  border-radius: 4px;
 }
 
 .regular-link:hover,
@@ -549,7 +594,6 @@ footer {
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer-icon {
